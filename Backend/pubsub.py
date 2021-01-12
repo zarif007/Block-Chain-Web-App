@@ -5,11 +5,12 @@ from pubnub.pnconfiguration import PNConfiguration
 from pubnub.callbacks import SubscribeCallback
 
 from Backend.blockchain.Block import Block
+from Backend.key import subscribe_key, publish_key
 
 
 pnconfig = PNConfiguration()
-pnconfig.subscribe_key = 'sub-c-f41bde00-54c5-11eb-bfb3-7239c411611a'
-pnconfig.publish_key = 'pub-c-9b242c62-0451-4a2c-a955-86d2aa6fc8ca'
+pnconfig.subscribe_key = subscribe_key
+pnconfig.publish_key = publish_key
 
 
 CHANNELS = {
