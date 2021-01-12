@@ -34,12 +34,17 @@ class Block:
             f'Hash -> {self.hash}, '
             f'data -> {self.data} ) '
             f'difficulty -> {self.difficulty}, '
-            f'nonce -> {self.nonce}'
+            f'nonce -> {self.nonce}\n'
         )
 
     def __eq__(self, other):
         return self.__dict__ == other.__dict__
-    
+
+    def to_json(self):
+        """Searialize the block into a dictionary of its attributes"""
+        
+        return self.__dict__
+
     @staticmethod
     def mine_block(last_block, data):
         """Mine a block based on the last given block and data, until a block
@@ -63,6 +68,11 @@ class Block:
         """Generate the genesis block"""
 
         return Block(**GENESIS_DATA)
+
+    @staticmethod
+    def from_json(block_json):
+        """Deserailize a block's json repr back into block instance"""
+        return Block(**block_json)
 
     @staticmethod
     def adjust_difficulty(last_block, new_timestamp):
