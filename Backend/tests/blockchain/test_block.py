@@ -75,7 +75,7 @@ def test_is_valid_block_bad_last_hash(last_block, block):
 def test_is_valid_bad_proof_of_work(last_block, block):
     block.hash = 'aaaa'
 
-    with pytest.raises(Exception, match='The proof of rewuirement was not met'):
+    with pytest.raises(Exception, match='The proof of requirement was not met'):
         Block.is_valid_block(last_block, block)
 
 def test_is_valid_block_jumped_difficulty(last_block, block):
