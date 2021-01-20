@@ -1,3 +1,8 @@
+**Activating Virtual Environment**
+```pip install virtualenv```
+
+```virtualenv blockchain-env```
+
 **Activate virtual environment**
 
 ```source blockchain-env/scripts/activate```
@@ -24,3 +29,9 @@ Make sure to activate the virtual environment
 Make sure to activate the virtual environment
 
 ```export PEER=True && python -m Backend.app```
+
+
+**Running the FrontEnd**
+
+```cd frontend```
+```npm run start```

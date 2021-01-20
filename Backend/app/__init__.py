@@ -3,6 +3,7 @@ import random
 import requests
 
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 from Backend.blockchain.Blockchain import Blockchain
 from Backend.wallet.wallet import Wallet
@@ -11,6 +12,7 @@ from Backend.wallet.transaction_pool import TransactionPool
 from Backend.pubsub import PubSub
 
 app = Flask(__name__)
+CORS(app, resourses={ r'/*' : { 'origins': 'http://localhost:3000' } })
 blockchain = Blockchain()
 wallet = Wallet(blockchain)
 transaction_pool = TransactionPool()
@@ -23,6 +25,17 @@ def default():
 @app.route('/blockchain')
 def route_blockchain():
     return jsonify(blockchain.to_json())
+
+@app.route('/blockchain/range')
+def route_blockchain_range():
+    start = int(request.args.get('start'))
+    end = int(request.args.get('end'))
+
+    return jsonify(blockchain.to_json()[::-1 ][start:end])
+
+@app.route('/blockchain/length')
+def route_blockchain_length():
+    return jsonify(len(blockchain.chain))
 
 @app.route('/blockchain/mine')
 def route_blockchain_mine():
