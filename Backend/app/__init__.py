@@ -75,6 +75,19 @@ def route_wallet_transact():
 def route_wallet_info():
     return jsonify({'address' : wallet.address, 'balance' : wallet.balance})
 
+@app.route('/known-addresses')
+def route_known_addresses():
+    know_addresses = set()
+
+    for block in blockchain.chain:
+        for transaction in block.data:
+            know_addresses.update(transaction['output'].keys())
+
+    return jsonify(list(know_addresses))
+
+@app.route('/transactions')
+def route_transaction():
+    return jsonify(transaction_pool.transaction_data())
 
 ROOT_PORT = 5000
 PORT = ROOT_PORT
@@ -91,6 +104,18 @@ if os.environ.get('PEER') == 'True':
         print('\n -> Successfully syncronized the local chain')
     except Exception as e:
         print(f'\n -> Error in syncroning the local chain : {e}')
+
+if os.environ.get('SEED_DATA') == 'True':
+    for i in range(10):
+        blockchain.add_block([
+            Transaction(Wallet(), Wallet().address, random.randint(2, 50)).to_json(),
+            Transaction(Wallet(), Wallet().address, random.randint(2, 50)).to_json()
+        ])
+
+    for i in range(3):
+        transaction_pool.set_transaction(
+            Transaction(Wallet(), Wallet().address, random.randint(2, 50))
+        )
 
 
 app.run(port=PORT)

@@ -53,3 +53,14 @@ input, button {
   border-radius: 3px;
   padding: 5px 10px;
 } */
+
+.link {
+  color: #85C1E9;
+}
+.link:hover {
+   color: #2683c0;
+}
+
+hr {
+  border: 1px solid #85C1E9;
+}

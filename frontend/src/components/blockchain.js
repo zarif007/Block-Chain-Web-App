@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Button } from 'react-bootstrap';
+import {Link} from 'react-router-dom'
 import {API_BASE_URL} from '../config'
 import Block from './block'
 
@@ -31,6 +32,8 @@ function Blockchain(){
 
     return(
         <div className="Blockchain">
+            <Link to='./' className="link">Home</Link>
+            <hr/>
             <h3>Blockchain</h3>
             <div>{blockchain.map(block => 
                 <Block key={block.hash} block={block}/>

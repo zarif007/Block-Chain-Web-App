@@ -8,4 +8,4 @@ MINE_RATE = 4 * SECONDS
 STARTING_BALANCE = 1000
 
 MININIG_REWARD = 50
-MININIG_REWARD_INPUT = {'address' : '*--official-mining-reward--*'}
+MININIG_REWARD_INPUT = {'address' : 'official-mining-reward'}

@@ -44,10 +44,10 @@ function Block({ block }){
 
     return(
         <div className="Block">
-            <div>Previous Hash : {last_hash}</div>
+            <div>Previous Hash : {lasthash}</div>
             <div>Hash : {hashDisplay}</div>
             <div>TimeStamp : {timestampDisplay}</div>
-            
+            <br/>
             <ToggleTransactionDisplay block={block}/>
         </div>
     )

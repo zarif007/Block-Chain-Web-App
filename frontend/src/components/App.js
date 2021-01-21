@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import logo from '../assets/logo.png'
 import {API_BASE_URL} from '../config'
-
-import Blockchain from './blockchain'
 
 function App() {
   const [walletInfo, setWalletInfo] = useState({})
@@ -24,14 +23,17 @@ function App() {
     <div className="App">
       <img className="logo" src={logo} alt="logo"/>
       <h1>Welcome to ZedChain </h1>
+      <br/>
       <div>Total Block count : {blockchainLength}</div>
-      <br></br>
+      <br/>
       <div className="WalletInfo">
         <div>Address: {address}</div>
         <div>Balance: {balance} ZedCoin</div>
       </div>
-      <br/>
-      <Blockchain />
+      <br></br>
+      <Link to='/blockchain' className="link">Blockchain</Link>
+      <Link to='/conduct-transaction' className="link">Conduct a Transaction</Link>
+      <Link to='/transaction-pool' className="link">Transaction Pool</Link>
     </div>
   );
 }

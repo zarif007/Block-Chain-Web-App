@@ -4,7 +4,7 @@ function Transaction({transaction}){
     const {input, output} = transaction;
     const recipient = Object.keys(output);
 
-    if(input.address == "*--official-mining-reward--*"){
+    if(input.address == "official-mining-reward"){
         input.address = `🎖️${input.address}🎖️`
     }
 
