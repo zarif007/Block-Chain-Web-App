@@ -1,4 +1,4 @@
-from Backend.util.hex_to_binary import hex_to_binary
+from backend.util.hex_to_binary import hex_to_binary
 
 def test_hex_to_binary():
     original_number = 786

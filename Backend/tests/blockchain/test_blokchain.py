@@ -1,9 +1,9 @@
 import pytest
 
-from Backend.blockchain.Blockchain import Blockchain
-from Backend.blockchain.Block import GENESIS_DATA
-from Backend.wallet.transaction import Transaction
-from Backend.wallet.wallet import Wallet
+from backend.blockchain.Blockchain import Blockchain
+from backend.blockchain.Block import GENESIS_DATA
+from backend.wallet.transaction import Transaction
+from backend.wallet.wallet import Wallet
 
 def test_blockchain_insstance():
     """should match the hash value of genesis"""

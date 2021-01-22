@@ -4,9 +4,9 @@ from pubnub.pubnub import PubNub
 from pubnub.pnconfiguration import PNConfiguration
 from pubnub.callbacks import SubscribeCallback
 
-from Backend.blockchain.Block import Block
-from Backend.key import subscribe_key, publish_key
-from Backend.wallet.transaction import Transaction
+from backend.blockchain.Block import Block
+from backend.key import subscribe_key, publish_key
+from backend.wallet.transaction import Transaction
 
 
 pnconfig = PNConfiguration()

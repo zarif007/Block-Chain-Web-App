@@ -1,9 +1,9 @@
 import requests
 import time
 
-from Backend.wallet.wallet import Wallet
+from backend.wallet.wallet import Wallet
 
-BASE_URL = 'http://localhost:5000/'
+BASE_URL = 'https://zedchain.herokuapp.com/'
 
 def get_blockchain():
     return requests.get(f'{BASE_URL}blockchain').json()

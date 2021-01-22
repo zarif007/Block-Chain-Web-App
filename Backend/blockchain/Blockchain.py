@@ -1,7 +1,7 @@
-from Backend.blockchain.Block import Block
-from Backend.wallet.transaction import Transaction
-from Backend.wallet.wallet import Wallet
-from Backend.config import MININIG_REWARD_INPUT
+from backend.blockchain.Block import Block
+from backend.wallet.transaction import Transaction
+from backend.wallet.wallet import Wallet
+from backend.config import MININIG_REWARD_INPUT
 
 class Blockchain:
     """Blockchain technology is most simply defined as a decentralized, 

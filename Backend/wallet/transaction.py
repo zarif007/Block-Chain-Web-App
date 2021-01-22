@@ -1,8 +1,8 @@
 import uuid
 import time 
 
-from Backend.wallet.wallet import Wallet
-from Backend.config import MININIG_REWARD, MININIG_REWARD_INPUT
+from backend.wallet.wallet import Wallet
+from backend.config import MININIG_REWARD, MININIG_REWARD_INPUT
 
 class Transaction:
     """Doc of an exchange in currency from a sender to 

@@ -1,7 +1,7 @@
 import uuid
 import json
 
-from Backend.config import STARTING_BALANCE
+from backend.config import STARTING_BALANCE
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives.asymmetric.utils import (

@@ -5,14 +5,14 @@ import requests
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-from Backend.blockchain.Blockchain import Blockchain
-from Backend.wallet.wallet import Wallet
-from Backend.wallet.transaction import Transaction
-from Backend.wallet.transaction_pool import TransactionPool
-from Backend.pubsub import PubSub
+from backend.blockchain.Blockchain import Blockchain
+from backend.wallet.wallet import Wallet
+from backend.wallet.transaction import Transaction
+from backend.wallet.transaction_pool import TransactionPool
+from backend.pubsub import PubSub
 
 app = Flask(__name__)
-CORS(app, resourses={ r'/*' : { 'origins': 'http://localhost:3000' } })
+CORS(app, resourses={ r'/*' : { 'origins': 'https://zedchain.herokuapp.com/' } })
 blockchain = Blockchain()
 wallet = Wallet(blockchain)
 transaction_pool = TransactionPool()

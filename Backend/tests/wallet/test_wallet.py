@@ -1,7 +1,7 @@
-from Backend.wallet.wallet import Wallet
-from Backend.blockchain.Blockchain import Blockchain
-from Backend.config import STARTING_BALANCE
-from Backend.wallet.transaction import Transaction
+from backend.wallet.wallet import Wallet
+from backend.blockchain.Blockchain import Blockchain
+from backend.config import STARTING_BALANCE
+from backend.wallet.transaction import Transaction
 
 def test_verify_valid_signature():
     data = {'kire' : 'kmn asos?'}

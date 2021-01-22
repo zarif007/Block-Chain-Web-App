@@ -1,8 +1,8 @@
 import pytest
 
-from Backend.wallet.transaction import Transaction
-from Backend.wallet.wallet import Wallet
-from Backend.config import MININIG_REWARD, MININIG_REWARD_INPUT
+from backend.wallet.transaction import Transaction
+from backend.wallet.wallet import Wallet
+from backend.config import MININIG_REWARD, MININIG_REWARD_INPUT
 
 def test_transaction():
     sender_wallet = Wallet()

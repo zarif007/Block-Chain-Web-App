@@ -1,4 +1,4 @@
-from Backend.util.crypto_hash import crypto_hash
+from backend.util.crypto_hash import crypto_hash
 
 HEX_TO_BINARY_CONVERTION_TABLE = {
  	'0' : '0000',

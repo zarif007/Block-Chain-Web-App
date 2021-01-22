@@ -1,4 +1,4 @@
-from Backend.util.crypto_hash import crypto_hash
+from backend.util.crypto_hash import crypto_hash
 
 def test_crypto_hash():
     """should return a hashed value"""

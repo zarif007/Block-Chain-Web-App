@@ -1,9 +1,9 @@
 import pytest
 import time
 
-from Backend.blockchain.Block import Block, GENESIS_DATA
-from Backend.config import MINE_RATE, SECONDS
-from Backend.util.hex_to_binary import hex_to_binary
+from backend.blockchain.Block import Block, GENESIS_DATA
+from backend.config import MINE_RATE, SECONDS
+from backend.util.hex_to_binary import hex_to_binary
 
 def test_mine_block():
     """should be an instance of Block, match data and last block of genesis"""
