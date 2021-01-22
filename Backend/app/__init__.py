@@ -12,7 +12,7 @@ from Backend.wallet.transaction_pool import TransactionPool
 from Backend.pubsub import PubSub
 
 app = Flask(__name__)
-CORS(app, resourses={ r'/*' : { 'origins': 'https://zedchain.herokuapp.com/ ' } })
+CORS(app, resourses={ r'/*' : { 'origins': 'http://localhost:3000' } })
 blockchain = Blockchain()
 wallet = Wallet(blockchain)
 transaction_pool = TransactionPool()
@@ -95,7 +95,7 @@ PORT = ROOT_PORT
 if os.environ.get('PEER') == 'True':
     PORT = random.randint(5001, 6000)
 
-    result = result.get('https://zedchain.herokuapp.com/ ')
+    result = result.get(f'http://localhost:{ROOT_PORT}/blockchain')
 
     result_blockchain = Blockchain.from_json(result.json())
 

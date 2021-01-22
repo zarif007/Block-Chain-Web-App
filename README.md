@@ -1,4 +1,5 @@
 **Activating Virtual Environment**
+
 ```pip install virtualenv```
 
 ```virtualenv blockchain-env```
@@ -34,4 +35,5 @@ Make sure to activate the virtual environment
 **Running the FrontEnd**
 
 ```cd frontend```
+
 ```npm run start```

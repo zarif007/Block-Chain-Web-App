@@ -5,6 +5,7 @@ import Transaction from './transaction';
 import {API_BASE_URL, SECONDS_JS} from '../config'
 import history from '../history';
 
+
 const POLL_INTERVAL = 10 * SECONDS_JS;
 
 function TransactionPool() {
