@@ -31,9 +31,11 @@ function App() {
         <div>Balance: {balance} ZedCoin</div>
       </div>
       <br></br>
-      <Link to='/blockchain' className="link">Blockchain</Link>
-      <Link to='/conduct-transaction' className="link">Conduct a Transaction</Link>
-      <Link to='/transaction-pool' className="link">Transaction Pool</Link>
+      <div className="DisplayLink">
+        <Link to='/blockchain' className="link">Blockchain</Link> <br/>
+        <Link to='/conduct-transaction' className="link">Conduct a Transaction</Link> <br/>
+        <Link to='/transaction-pool' className="link">Transaction Pool</Link>
+      </div>
     </div>
   );
 }

@@ -64,3 +64,9 @@ input, button {
 hr {
   border: 1px solid #85C1E9;
 }
+
+.DisplayLink {
+  border: 3px solid #85C1E9;
+  padding: 2%;
+  margin: 3%;
+}
